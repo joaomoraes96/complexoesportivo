@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo/style.css">
+    <script src="./script.js" defer></script>
+
+    <title>Complexo Esportivo</title>
+
+
+</head>
+      
+    <body>
+        <nav>
+            <div class="container nav-container">
+                <img src="./images/logocomplexo.jpeg" alt="completo logo" width="100">
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link" data-target="carousel">Inicio</a></li>
+                    <li><a href="#" class="nav-link" data-target="sports-modalities">Eventos</a></li>
+                    <li><a href="#" class="nav-link" data-target="registration">História</a></li>
+                    <li><a href="#" class="nav-link" data-target="register-container">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+        <section class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="images/salto.jpg" alt="Soccer match in a large stadium, aerial view" width="1200" height="600">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/judo.jpg" alt="Basketball player dunking in a professional game" width="1200" height="600">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/esgrima.jpg" alt="Tennis player serving on a clay court" width="1200" height="600">
+                </div>
+            </div>
+            <a href="#" class="carousel-control prev">&lt;</a>
+            <a href="#" class="carousel-control next">&gt;</a>
+            <a href="#" class="story-button">Our Story</a>
+        </section>
+    
+        <header class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Conheça nossa estrutura</h1>
+                    </div>
+                    <div class="hero-video">
+                        <button class="play-button">
+
+                            <iframe width="560" height="415" src="https://www.youtube.com/embed/F79mtXjYV-k?si=wRGjFeBRqefkfeJZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                       
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <section class="registration">
+            <div class="container">
+                <h2>Como funciona nossas atividades?</h2>
+                <div class="registration-steps">
+                    <div class="step">
+                        <div class="step-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-number">1</div>
+                            <h3>Se cadastrar</h3>
+                            <p>Sign up with your email and choose a password to get started.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-number">2</div>
+                            <h3>Escolher modalidade</h3>
+                            <p>Select the sports you're interested in and customize your experience.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-number">3</div>
+                            <h3>Escolher horário</h3>
+                            <p>Browse and join upcoming events in your area or online.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        
+        <!-- Modalidades -->
+    
+        <!-- <div class="container register-container">
+            <a href="/register" class="register-button">Register Now</a>
+        </div> -->
+    
+        <section class="sports-modalities">
+            <div class="container">
+                <h2>Modalidades de esportes</h2>
+                <div class="modalities-grid">
+                    <div class="modality">
+                        <img src="./images/modalidades/fut7.jpg" alt="futebol 7" width="250" height="150">
+                        <h3>Futebol 7</h3>
+                        <p>Experience the thrill of the world's most popular sport.</p>
+                    </div>
+                    <div class="modality">
+                        <img src="./images/modalidades/esgrima.jpg" alt="esgrima width="250" height="150">
+                        <h3>Esgrima</h3>
+                        <p>Dive into the refreshing world of aquatic sports.</p>
+                    </div>
+                    <div class="modality">
+                        <img src="./images/modalidades/atletismo.jpg" alt="atletismo" width="250" height="150">
+                        <h3>Atletismo</h3>
+                        <p>Push your limits in track and field events.</p>
+                    </div>
+                    <div class="modality">
+                        <img src="./images/modalidades/luta.jpg" alt="judo" width="250" height="150">
+                        <h3>Luta</h3>
+                        <p>Master the art of combat sports and martial arts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria de imagens -->
+
+        <section class="gallery">
+            <div class="container">
+                <h2>Galeria de imagens</h2>
+                <div class="gallery-grid">
+                    <img src="./images/galeria/Screenshot_1.jpg" alt="Aerial view of the sports complex" width="300" height="200" class="gallery-img">
+                    <img src="./images/galeria/Screenshot_2.jpg" alt="Main stadium during a game" width="300" height="200" class="gallery-img">
+                    <img src="./images/galeria/Screenshot_3.jpg" alt="Olympic-sized swimming pool" width="300" height="200" class="gallery-img">
+                    <img src="./images/galeria/Screenshot_4.jpg" alt="Indoor basketball court" width="300" height="200" class="gallery-img">
+                    <img src="./images/galeria/Screenshot_5.jpg" alt="Athletics track" width="300" height="200" class="gallery-img">
+                    <img src="./images/galeria/Screenshot_6.jpg" alt="Fitness center" width="300" height="200" class="gallery-img">
+                    <img src="./images/galeria/Screenshot_7.jpg" alt="Fitness center" width="300" height="200" class="gallery-img">
+                    <img src="./images/galeria/Screenshot_8.jpg" alt="Fitness center" width="300" height="200" class="gallery-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Registro -->
+       
+        <section class="registration-form">
+            <div class="container">
+                <h2>Cadastre-se no Complexo Esportivo</h2>
+                <form class="input-form">
+                    <div class="input-group">
+                        <label for="full-name">Nome completo</label>
+                        <input type="text" id="full-name" name="full-name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="cell-phone">Telefone</label>
+                        <input type="tel" id="cell-phone" name="cell-phone" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="parents-name">Nome do responsável</label>
+                        <input type="text" id="parents-name" name="parents-name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="school">Qual sua sua escola?</label>
+                        <select id="school" name="school" required>
+                            <option value="">Selecione sua escola</option>
+                            <option value="school1">Escola 1</option>
+                            <option value="school2">Escola 2</option>
+                            <option value="school3">Escola 3</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="sports-modality">Escolha sua modalidade</label>
+                        <select id="sports-modality" name="sports-modality" required>
+                            <option value="">Selecione seu esporte favorito</option>
+                            <option value="football">Futebol7</option>
+                            <option value="swimming">Esgrima</option>
+                            <option value="athletics">Atletismo</option>
+                            <option value="fighting">Luta</option>
+                            <option value="other">Outra/option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button">Finalizar cadastro</button>
+                </form>
+            </div>
+        </section>
+           
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+    
+        <section class="complex-story">
+            <div class="container">
+                <h2>Como surgiu o complexo esportivo</h2>
+                <div class="story-content">
+                    <img src="./images/complexo.jpg" alt="complexo esportivo" width="400" height="300" class="story-img">
+                    <div class="story-text">
+                        <h3>From Humble Beginnings</h3>
+                        <p>Our sports complex started as a simple community field in 1980. Local sports enthusiasts would gather here for friendly matches and small tournaments.</p>
+                        <h3>Growing with the Community</h3>
+                        <p>As our community grew, so did the need for better sports facilities. In 2000, a group of passionate individuals came together to propose a comprehensive sports complex.</p>
+                        <h3>The Modern Era</h3>
+                        <p>After years of planning and construction, our state-of-the-art sports complex opened its doors in 2010. Today, it stands as a testament to our community's love for sports and provides world-class facilities for athletes of all levels.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://facebook.com/sportszone" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://twitter.com/sportszone" target="_blank" rel="noopener noreferrer">Twitter</a>
+                    <a href="https://instagram.com/sportszone" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+                <p class="developer-info">Desenvolvido por João Moraes</p>
+            </div>
+
+            <img src="./images/logopilar.png" alt="">
+        </footer>
+
+    </body>
+
+</html>
