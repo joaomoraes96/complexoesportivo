@@ -1,6 +1,6 @@
 :root {
     --primary-color: #1e88e5;
-    --secondary-color: #67e73f;
+    --secondary-color: #39ce0c;
     --text-color: #333333;
     --bg-color: #f5f5f5;
 }
@@ -15,19 +15,19 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 /* Navigation */
 nav {
     background-color: var(--primary-color);
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
 
 .nav-container {
@@ -36,12 +36,12 @@ nav {
     align-items: center;
 }
 
-.logo {
+/* .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
     text-decoration: none;
-}
+} */
 
 .nav-links {
     display: flex;
@@ -55,7 +55,7 @@ nav {
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
@@ -63,11 +63,87 @@ nav {
     color: var(--secondary-color);
 }
 
+/* Botao contato */
+
+.contact-button {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.contact-button {
+    animation: pulse 2s infinite;
+}
+
+
+
+/* Icones redes sociais */
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--secondary-color);
+}
+
 /* Carousel */
 .carousel {
     position: relative;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Gradiente inicio */
+
+.carousel-phrase {
+    position: absolute;
+    left: 4%;
+    margin-top: 20%;
+    z-index: 10;
+    width: 35%;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 30px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-phrase h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    line-height: 1.1;
 }
 
 .carousel-inner {
@@ -77,11 +153,12 @@ nav {
 
 .carousel-item {
     flex: 0 0 100%;
+    
 }
 
 .carousel-item img {
     width: 100%;
-    height: 625px;
+    height: 600px;
 }
 
 .carousel-control {
@@ -103,7 +180,32 @@ nav {
     right: 0;
 }
 
-.story-button {
+ /* Carousel bolas */
+ .carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+/* .story-button {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -121,7 +223,7 @@ nav {
 
 .story-button:hover {
     background-color: rgba(255, 255, 255, 0.5);
-}
+} */
 
 /* Hero Section */
 .hero {
@@ -169,11 +271,11 @@ nav {
     transform: scale(1.1);
 }
 
-.play-button svg {
+/* .play-button svg {
     width: 64px;
     height: 64px;
     color: var(--primary-color);
-}
+} */
 
 /* Registration Section */
 .registration {
@@ -243,7 +345,7 @@ nav {
     color: var(--text-color);
 }
 
-/* Registration Form Styles */
+/* formulario de registro*/
 .registration-form {
     padding: 4rem 0;
     background-color: #f0f8ff;
@@ -302,13 +404,13 @@ nav {
     background-color: var(--secondary-color);
 }
 
-/* User Input */
+/* usuario Input */
 .user-input {
     padding: 4rem 0;
     background-color: var(--bg-color);
 }
 
-/* Sports Modalities */
+/* modalidades esporte */
 .sports-modalities {
     padding: 4rem 0;
     background-color: var(--bg-color);
@@ -358,7 +460,7 @@ nav {
     color: var(--text-color);
 }
 
-/* Registration Button */
+/* botao de registro */
 .register-container {
     text-align: center;
     padding: 2rem 0 4rem;
@@ -382,7 +484,7 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
+/* final da pagina  */
 .footer {
     background-color: var(--primary-color);
     color: white;
@@ -406,7 +508,7 @@ nav {
     opacity: 0.8;
 }
 
-/* Gallery Styles */
+/* galeria de fotos*/
 .gallery {
     padding: 4rem 0;
     background-color: #f9f9f9;
@@ -438,7 +540,7 @@ nav {
     transform: scale(1.05);
 }
 
-/* Modal Styles */
+/* historia complexo */
 .modal {
     display: none;
     position: fixed;
@@ -496,7 +598,8 @@ nav {
 }
 
 .story-img {
-    flex: 1;
+    flex: 2;
+    height: 400px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

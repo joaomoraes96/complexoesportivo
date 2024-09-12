@@ -1,97 +1,105 @@
-        // Carousel functionality
-        const carousel = document.querySelector('.carousel-inner');
-        const items = carousel.querySelectorAll('.carousel-item');
-        const prevBtn = document.querySelector('.carousel-control.prev');
-        const nextBtn = document.querySelector('.carousel-control.next');
-        let currentIndex = 0;
+ // Carousel functionality
+ const carousel = document.querySelector('.carousel-inner');
+ const items = carousel.querySelectorAll('.carousel-item');
+ const prevBtn = document.querySelector('.carousel-control.prev');
+ const nextBtn = document.querySelector('.carousel-control.next');
+ let currentIndex = 0;
 
-        function showSlide(index) {
-            if (index < 0) {
-                currentIndex = items.length - 1;
-            } else if (index >= items.length) {
-                currentIndex = 0;
-            } else {
-                currentIndex = index;
-            }
-            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
+ // Create dots for carousel navigation
+ const dotsContainer = document.querySelector('.carousel-dots');
+ items.forEach((_, index) => {
+     const dot = document.createElement('div');
+     dot.classList.add('dot');
+     if (index === 0) dot.classList.add('active');
+     dot.addEventListener('click', () => showSlide(index));
+     dotsContainer.appendChild(dot);
+ });
 
-        prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
-        nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
+ const dots = document.querySelectorAll('.dot');
 
-        // Auto-rotate carousel
-        setInterval(() => showSlide(currentIndex + 1), 5000);
+ function showSlide(index) {
+     if (index < 0) {
+         currentIndex = items.length - 1;
+     } else if (index >= items.length) {
+         currentIndex = 0;
+     } else {
+         currentIndex = index;
+     }
+     carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+     
+     // Update active dot
+     dots.forEach((dot, i) => {
+         dot.classList.toggle('active', i === currentIndex);
+     });
+ }
 
-        // Form submission
-        const form = document.querySelector('.input-form');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
-            console.log('Form submitted with data:', data);
-            alert('Thank you for registering!');
-            form.reset();
-        });
+ prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
+ nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('data-target');
-                const targetElement = document.querySelector(`.${targetId}`);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+ // Auto-rotate carousel
+ setInterval(() => showSlide(currentIndex + 1), 5000);
 
-        // Make all buttons functional
-        document.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                if (link.getAttribute('href') === '#' && !link.classList.contains('nav-link')) {
-                    e.preventDefault();
-                    alert('This feature is coming soon!');
-                }
-            });
-        });
+ // Form submission
+ const form = document.querySelector('.input-form');
+ form.addEventListener('submit', (e) => {
+     e.preventDefault();
+     const formData = new FormData(form);
+     const data = Object.fromEntries(formData.entries());
+     console.log('Form submitted with data:', data);
+     alert('Thank you for registering!');
+     form.reset();
+ });
 
-        // Update the play button functionality
-        const playButton = document.querySelector('.play-button');
-        playButton.addEventListener('click', () => {
-            alert('Video playback is coming soon!');
-        });
+ // Smooth scrolling for navigation links
+ document.querySelectorAll('.nav-link').forEach(link => {
+     link.addEventListener('click', function(e) {
+         e.preventDefault();
+         const targetId = this.getAttribute('data-target');
+         const targetElement = document.querySelector(`.${targetId}`);
+         if (targetElement) {
+             targetElement.scrollIntoView({
+                 behavior: 'smooth'
+             });
+         }
+     });
+ });
 
-        // Gallery and Modal functionality
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImg');
-        const galleryImages = document.querySelectorAll('.gallery-img');
-        const closeBtn = document.querySelector('.close');
+ // Make all buttons functional
+ document.querySelectorAll('a').forEach(link => {
+     link.addEventListener('click', (e) => {
+         if (link.getAttribute('href') === '#' && !link.classList.contains('nav-link')) {
+             e.preventDefault();
+             alert('This feature is coming soon!');
+         }
+     });
+ });
 
-        galleryImages.forEach(img => {
-            img.addEventListener('click', () => {
-                modal.style.display = 'block';
-                modalImg.src = img.src;
-            });
-        });
+ // Update the play button functionality
+ const playButton = document.querySelector('.play-button');
+ playButton.addEventListener('click', () => {
+     alert('Video playback is coming soon!');
+ });
 
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
+ // Gallery and Modal functionality
+ const modal = document.getElementById('imageModal');
+ const modalImg = document.getElementById('modalImg');
+ const galleryImages = document.querySelectorAll('.gallery-img');
+ const closeBtn = document.querySelector('.close');
 
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
+ galleryImages.forEach(img => {
+     img.addEventListener('click', () => {
+         modal.style.display = 'block';
+         modalImg.src = img.src;
+     });
+ });
 
-        const storyButton = document.querySelector('.story-button');
-        const complexStorySection = document.querySelector('.complex-story');
+ closeBtn.addEventListener('click', () => {
+     modal.style.display = 'none';
+ });
 
-        storyButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            complexStorySection.scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+ window.addEventListener('click', (event) => {
+     if (event.target === modal) {
+         modal.style.display = 'none';
+     }
+ });
+ 
